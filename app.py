@@ -11,6 +11,13 @@ import time
 
 st.title('Document Question Answering')
 
+
+st.write("""
+🐢 **A Fun Caution**:
+Given our commitment to using top-notch free resources, sometimes our app prefers a leisurely stroll over a sprint. Think of it as a relaxed turtle 🐢, not a hurried hare 🐇. But as they say, good things come to those who wait!
+""")
+
+
 # get embeddings
 def get_enbeddings():
     
@@ -130,9 +137,4 @@ When you interact with our app, here's the journey your query undertakes:
 6. **Answer Delivery**: And there you have it! A comprehensive answer is presented, often with references to the source pages for further exploration.
 
 This intricate dance of operations ensures that every query receives a well-informed and contextually rich response.
-""")
-
-st.write("""
-🐢 **A Fun Caution**:
-Given our commitment to using top-notch free resources, sometimes our app prefers a leisurely stroll over a sprint. Think of it as a relaxed turtle 🐢, not a hurried hare 🐇. But as they say, good things come to those who wait!
 """)
