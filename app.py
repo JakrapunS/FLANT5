@@ -106,6 +106,7 @@ predefined_questions = [
     "Can you provide a summary of electricity demand and trends from 2000 to 2021?"
 ]
 
+st.subheader("💡 Query to Answer💡")
 st.write("Sample questions")
 
 # Check if 'selected_question' exists in the session state
