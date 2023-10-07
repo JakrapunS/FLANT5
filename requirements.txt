@@ -2,4 +2,3 @@ langchain
 pypdf 
 sentence-transformers 
 qdrant_client
-streamlit==0.75.0
