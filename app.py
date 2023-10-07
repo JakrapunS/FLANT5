@@ -11,45 +11,6 @@ import time
 
 st.title('Document Question Answering')
 
-st.subheader("🛠 How It Works 🛠")
-
-st.write("""
-Our Document Question Answering App is a combination of language models with vector databases. Here's an overview workflow, as visualized in the provided diagram:
-""")
-
-st.image("diagram.png", caption="Flow Diagram of the Document Question Answering App.", use_column_width=True)
-
-st.subheader("🔧 Preprocessing 🔧")
-
-st.write("""
-Before diving into the real-time workings of our app, there's some behind-the-scenes magic that happens:
-
-1. **Document Preprocess**: We start with extracting content from PDF files and then split this content into manageable chunks.
-2. **Create Embedding**: Each chunk undergoes a transformation using the HuggingFace Inference API, turning them into sentence embeddings.
-3. **Vector Database Population**: These meaningful embeddings are then stored securely in the Qdrant cloud vector database, ready for swift retrieval later on.
-""")
-
-st.subheader("🚀 Application Workflow 🚀")
-
-st.write("""
-When you interact with our app, here's the journey your query undertakes:
-
-1. **User Query Submission**: It all starts with you! Submit a question, and the gears start turning.
-2. **Embedding Extraction**: Your question is promptly transformed into embeddings using the HuggingFace Inference API.
-3. **Vector Database Search**: The Qdrant vector database, housing knowledge from the Australian Energy Policy Review 2023 (and more), is queried with these embeddings to find matches.
-4. **Language Model Integration**: To elevate the quality of answers, the 'google/flan-t5-large' model from HuggingFaceHub is invoked.
-5. **RetrievalQA Mechanism**: LangChain's RetrievalQA plays the pivotal role of fetching the most contextually aligned data from the vector database.
-6. **Answer Delivery**: And there you have it! A comprehensive answer is presented, often with references to the source pages for further exploration.
-
-This intricate dance of operations ensures that every query receives a well-informed and contextually rich response.
-""")
-
-st.write("""
-🐢 **A Fun Caution**:
-Given our commitment to using top-notch free resources, sometimes our app prefers a leisurely stroll over a sprint. Think of it as a relaxed turtle 🐢, not a hurried hare 🐇. But as they say, good things come to those who wait!
-""")
-
-
 # get embeddings
 def get_enbeddings():
     
@@ -136,3 +97,42 @@ if st.button("Ask"):
     st.write(f"Source Pages: {source_page}")
 
 st.markdown("For more details, check out this [Australia 2023: Energy Policy Review](https://iea.blob.core.windows.net/assets/02a7a120-564b-4057-ac6d-cf21587a30d9/Australia2023EnergyPolicyReview.pdf).")
+
+
+st.subheader("🛠 How It Works 🛠")
+
+st.write("""
+Our Document Question Answering App is a combination of language models with vector databases. Here's an overview workflow, as visualized in the provided diagram:
+""")
+
+st.image("diagram.png", caption="Flow Diagram of the Document Question Answering App.", use_column_width=True)
+
+st.subheader("🔧 Preprocessing 🔧")
+
+st.write("""
+Before diving into the real-time workings of our app, there's some behind-the-scenes magic that happens:
+
+1. **Document Preprocess**: We start with extracting content from PDF files and then split this content into manageable chunks.
+2. **Create Embedding**: Each chunk undergoes a transformation using the HuggingFace Inference API, turning them into sentence embeddings.
+3. **Vector Database Population**: These meaningful embeddings are then stored securely in the Qdrant cloud vector database, ready for swift retrieval later on.
+""")
+
+st.subheader("🚀 Application Workflow 🚀")
+
+st.write("""
+When you interact with our app, here's the journey your query undertakes:
+
+1. **User Query Submission**: It all starts with you! Submit a question, and the gears start turning.
+2. **Embedding Extraction**: Your question is promptly transformed into embeddings using the HuggingFace Inference API.
+3. **Vector Database Search**: The Qdrant vector database, housing knowledge from the Australian Energy Policy Review 2023, is queried with these embeddings to find matches.
+4. **Language Model Integration**: To elevate the quality of answers, the 'google/flan-t5-large' model from HuggingFaceHub is invoked.
+5. **RetrievalQA Mechanism**: LangChain's RetrievalQA plays the pivotal role of fetching the most contextually aligned data from the vector database.
+6. **Answer Delivery**: And there you have it! A comprehensive answer is presented, often with references to the source pages for further exploration.
+
+This intricate dance of operations ensures that every query receives a well-informed and contextually rich response.
+""")
+
+st.write("""
+🐢 **A Fun Caution**:
+Given our commitment to using top-notch free resources, sometimes our app prefers a leisurely stroll over a sprint. Think of it as a relaxed turtle 🐢, not a hurried hare 🐇. But as they say, good things come to those who wait!
+""")
