@@ -12,7 +12,7 @@ import time
 st.title('Document Question Answering')
 
 st.write("""
-"Discover insights with ease! Our app empowers you to pose questions directly on the Australian Energy Policy Review 2023, offering context-rich answers instantly.
+Discover insights with ease! Our app empowers you to pose questions directly on the Australian Energy Policy Review 2023, offering context-rich answers instantly.
          """)
 
 st.write("""
